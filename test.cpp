@@ -1,6 +1,6 @@
 #include <iostream>
 #include<string>
-
+#define test "test"
 using namespace std;
 
 int main(void)
@@ -12,6 +12,7 @@ cout<<i<<endl;
     }
     return 0;
 }
+
 
 
 
