@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Etudiant.h"
-
+#define NB_Notes 10
 using namespace std;
 
 
@@ -9,7 +9,7 @@ void Etudiant::saisie(string n, string p)
     Etudiant::prenom=p;
     Etudiant::nom=n;
 
-    for(int i=0;i<10;i++)
+    for(int i=0;i<NB_Notes;i++)
     {
     cout << "Entrez une note : ";
     cin >> Etudiant::tabnotes[i];
@@ -37,18 +37,18 @@ return false;
 float Etudiant::moyenne()
 {
     float moyenne;
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < NB_Notes; i++)
 {
     moyenne += Etudiant::tabnotes[i];
 }
-moyenne=moyenne/10;
+moyenne=moyenne/NB_Notes;
 Etudiant::moy=moyenne;
 return moyenne;
 }
 
 bool Etudiant::admis()
 {
-    if (moy>=10)
+    if (moy>=NB_Notes)
     {
         return true;
     }
@@ -62,7 +62,7 @@ void Etudiant::affichage()
 {
 cout << "Nom : " << nom << endl;
 cout << "Prenom : " << prenom << endl;
-for(int i=0;i<10;i++)
+for(int i=0;i<NB_Notes;i++)
 {
    cout << "Note " << i+1 << " : " << Etudiant::tabnotes[i] << endl;
 }
@@ -75,7 +75,7 @@ void Etudiant_en_derniere_annee::affichage()
 {
 cout << "Nom : " << Etudiant_en_derniere_annee::nom << endl;
 cout << "Prenom : " << Etudiant_en_derniere_annee::prenom << endl;
-for(int i=0;i<10;i++)
+for(int i=0;i<NB_Notes;i++)
 {
    cout << "Note " << i+1 << " : " << Etudiant_en_derniere_annee::tabnotes[i] << endl;
 }
@@ -103,7 +103,7 @@ void Etudiant_en_derniere_annee::saisie(string n, string p)
     cout<<"Entrez la note de mémoire : ";
     cin >> Etudiant_en_derniere_annee::note_memoire;
 
-    for(int i=0;i<10;i++)
+    for(int i=0;i<NB_Notes;i++)
     {
         cout << "Note " << i+1 << " : " << endl;
         cin >> Etudiant_en_derniere_annee::tabnotes[i];
@@ -113,7 +113,7 @@ void Etudiant_en_derniere_annee::saisie(string n, string p)
 
 bool Etudiant_en_derniere_annee::admis()
 {
-    if(Etudiant_en_derniere_annee::moyenne() >=10 && Etudiant_en_derniere_annee::note_memoire>=10)
+    if(Etudiant_en_derniere_annee::moyenne() >=NB_Notes && Etudiant_en_derniere_annee::note_memoire>=NB_Notes)
     {
         return true;
     }
