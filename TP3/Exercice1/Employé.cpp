@@ -34,7 +34,7 @@ void Entreprise::affiche()
 {
     for(pair<int,Employe> e:ListEmploye)
     { 
-        cout<<e.second.nom<<" "<<e.second.prenom<<endl;
+        cout<<e.second.nom<<" "<<e.second.prenom<<" "<<e.second.salaire<<" euros"<<endl;
     }
 }
 
@@ -44,7 +44,7 @@ void Entreprise::AugmentationGeneral(float taux)
 {
     for(pair<int,Employe> e:ListEmploye)
     { 
-        e.second.salaire*taux;
+        ListEmploye[e.first].salaire=ListEmploye[e.first].salaire*taux;
     }
 }
 
