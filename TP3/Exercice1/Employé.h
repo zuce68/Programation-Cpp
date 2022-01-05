@@ -13,6 +13,7 @@ class Employe
     Employe(string nom,string prenom, string adresse,float salaire):nom(nom),prenom(prenom),adresse(adresse),salaire(salaire){matricule++;};
     Employe();
     float salaire;
+    void test()
 };
 
 class Entreprise 
