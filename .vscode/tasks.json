@@ -8,7 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}"
-                "Etudiant.cpp",
+                "Employé.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
