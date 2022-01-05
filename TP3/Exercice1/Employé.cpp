@@ -44,7 +44,7 @@ void Entreprise::AugmentationGeneral(float taux)
 {
     for(pair<int,Employe> e:ListEmploye)
     { 
-        ListEmploye[e.first].salaire=ListEmploye[e.first].salaire*taux;
+        ListEmploye[e.first].salaire*=taux;
     }
 }
 
